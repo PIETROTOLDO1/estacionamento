@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vagas de Estacionamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="brand">Controle de Estacionamento</a>
+        <ul class="nav-links">
+            <li><a href="lista.html">Ver Vagas Ocupadas</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="heading">Cadastro de Vagas de Estacionamento</h1>
+    
+    <form id="form-vaga" action="#" method="post" class="form">
+        <div class="form-group">
+            <label for="placa_veiculo" class="label">Placa do Veículo:</label>
+            <input type="text" id="placa_veiculo" name="placa_veiculo" class="input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nome_proprietario" class="label">Nome do Proprietário:</label>
+            <input type="text" id="nome_proprietario" name="nome_proprietario" class="input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numero_apartamento" class="label">Número do Apartamento:</label>
+            <input type="text" id="numero_apartamento" name="numero_apartamento" class="input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bloco_apartamento" class="label">Bloco do Apartamento:</label>
+            <input type="text" id="bloco_apartamento" name="bloco_apartamento" class="input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="modelo_veiculo" class="label">Modelo do Veículo:</label>
+            <input type="text" id="modelo_veiculo" name="modelo_veiculo" class="input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cor_veiculo" class="label">Cor do Veículo:</label>
+            <input type="text" id="cor_veiculo" name="cor_veiculo" class="input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numero_vaga" class="label">Número da Vaga de Estacionamento:</label>
+            <input type="text" id="numero_vaga" name="numero_vaga" class="input" required>
+        </div>
+
+        <button type="submit" class="button">Cadastrar Vaga</button>
+    </form>
+
+    <script src="script.js"></script>
+    <script>
+        // Função para cadastrar uma vaga
+        function cadastrarVaga() {
+            cadastrarVaga();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+h1{
+    text-align: center;
+    padding: 70px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ccc;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+
+#form-vaga {
+    margin: 0 auto; 
+    width: 100%; 
+    max-width: 300px; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; 
+}
+
+.form-group input,
+.form-group select {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8b451373; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+button[type="button"]:hover {
+    background-color: #d87749; 
+}
+
+#vagas-list {
+    display: grid;
+    gap: 10px;
+}
+
+.vaga {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vaga p {
+    margin: 10px 0;
+}
+
+.vaga button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    outline: none;
+}
+
+.vaga button.editButton {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.vaga button.deleteButton {
+    background-color: #f44336; 
+    color: white;
+}
+
+.vaga button:hover {
+    opacity: 0.9;
+}
+
+.ediButton,
+.excButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    outline: none; 
+}
+
+.ediButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.excButton {
+    background-color: #f44336; 
+    color: white;
+}
+
+.ediButton:hover,
+.excButton:hover {
+    opacity: 0.9; 
+}

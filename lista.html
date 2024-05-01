@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas de Estacionamento Ocupadas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="brand">Controle de Estacionamento</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Ver Tela de Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <h1>Vagas de Estacionamento Ocupadas</h1>
+
+    <div id="vagas-list"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Carregar os dados salvos no armazenamento local ao carregar a página
+        window.addEventListener('load', function() {
+            exibirVagasSalvas();
+        });
+
+        // Função para editar uma vaga
+        function editarVaga(index) {
+            // Recuperar os dados salvos no armazenamento local
+            var vagasSalvas = JSON.parse(localStorage.getItem('cadastros')) || [];
+
+            // Mostrar os dados a serem editados em um prompt
+            var novoCadastro = prompt("Edite os dados da vaga separados por vírgula na ordem: Placa do Veículo, Nome do Proprietário, Número do Apartamento, Bloco do Apartamento, Modelo do Veículo, Cor do Veículo, Número da Vaga de Estacionamento", Object.values(vagasSalvas[index]).join(','));
+
+            // Atualizar os dados da vaga se o usuário não cancelar o prompt
+            if (novoCadastro !== null) {
+                var novoCadastroArray = novoCadastro.split(',');
+                vagasSalvas[index] = {
+                    placaVeiculo: novoCadastroArray[0],
+                    nomeProprietario: novoCadastroArray[1],
+                    numeroApartamento: novoCadastroArray[2],
+                    blocoApartamento: novoCadastroArray[3],
+                    modeloVeiculo: novoCadastroArray[4],
+                    corVeiculo: novoCadastroArray[5],
+                    numeroVaga: novoCadastroArray[6]
+                };
+
+                // Salvar os dados atualizados no armazenamento local
+                localStorage.setItem('cadastros', JSON.stringify(vagasSalvas));
+
+                // Atualizar a exibição na tela
+                exibirVagasSalvas();
+            }
+        }
+
+        // Função para excluir uma vaga
+        function excluirVaga(index) {
+            // Recuperar os dados salvos no armazenamento local
+            var vagasSalvas = JSON.parse(localStorage.getItem('cadastros')) || [];
+
+            // Remover a vaga selecionada
+            vagasSalvas.splice(index, 1);
+
+            // Salvar os dados atualizados no armazenamento local
+            localStorage.setItem('cadastros', JSON.stringify(vagasSalvas));
+
+            // Atualizar a exibição na tela
+            exibirVagasSalvas();
+        }
+    </script>
+</body>
+</html>
